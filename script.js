@@ -18,8 +18,8 @@ getStates().then(states => {
         let entryKey = firstHalfOfStates[i].name;
         delete firstHalfOfStates[i].name;
         let entryValue = firstHalfOfStates[i];
-        const keyString = JSON.stringify(entryKey);
-        const valueString = JSON.stringify(entryValue);
+        const keyString = JSON.stringify(entryKey).toUpperCase();
+        const valueString = JSON.stringify(entryValue).toUpperCase();
         localStorage.setItem(keyString, valueString);
     }
 
